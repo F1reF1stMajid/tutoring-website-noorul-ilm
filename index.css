@@ -299,3 +299,60 @@ hr {
 html{
   scroll-behavior: smooth;
 }
+/* Global box-sizing fix */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Center elements */
+.container,
+.about-content,
+.contact-form {
+  margin: 0 auto;
+  width: 100%;  /* Ensure they take full width */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5rem;  /* Smaller heading on mobile */
+      text-align: center;  /* Center align heading */
+  }
+
+  .header img {
+      max-width: 100%;  /* Ensure image is responsive */
+      display: block;
+      margin: 0 auto;  /* Center image */
+  }
+
+  /* Center the sections */
+  .about-us,
+  #courses,
+  #contact {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-content,
+  .contact-form {
+    padding: 0 20px;  /* Reduce padding */
+    width: 100%;  /* Ensure content doesn't overflow */
+  }
+
+  .logo {
+    width: 70%;  /* Adjust logo size */
+    margin: 0 auto;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;  /* Single column grid for small screens */
+    gap: 20px;
+  }
+
+  .why-choose-item {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
